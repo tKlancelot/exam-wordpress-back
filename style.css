@@ -114,9 +114,18 @@
 
 .book-card__excerpt-frame__body button {
     background-color: var(--plugin-secondary);
-    border: 2px solid var(--plugin-write);
+    border-radius: 50%;
+    padding: 1vw;
 }
 
+.book-card__excerpt-frame__body button:hover{
+    background-color: var(--plugin-write);
+}
+
+.book-card__excerpt-frame__body button:hover svg{
+    fill:var(--plugin-primary);
+    /* stroke:var(--plugin-primary); */
+}
 
 @media screen and (max-width:800px) {
 
