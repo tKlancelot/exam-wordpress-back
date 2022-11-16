@@ -1,0 +1,15 @@
+.plugin-container{
+    width: auto;
+    margin:auto 18%;
+}
+
+.plugin-container .grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+}
+
+.book-card{
+    padding: 1rem;
+    border:1px solid #111!important;
+}
