@@ -43,7 +43,8 @@
 
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) {
+
     .book-card p,
     .book-card a,
     .book-card span {
@@ -60,8 +61,8 @@
     font-size: 2.4vw;
 }
 
-@media screen and (max-width:800px){
-    .book-card h1{
+@media screen and (max-width:800px) {
+    .book-card h1 {
         font-size: 6.4vw;
     }
 }
@@ -76,11 +77,11 @@
     justify-content: center;
     border-radius: 24px;
     text-decoration: none;
-    padding:0.5rem;
+    padding: 0.5rem;
     min-width: 4.8vw;
 }
 
-.book-card a{
+.book-card a {
     border: 1px solid var(--plugin-border);
 }
 
@@ -95,11 +96,11 @@
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) {
 
-.book-card a{
-    min-width: 16vw;
-}
+    .book-card a {
+        min-width: 16vw;
+    }
 
 
 }
