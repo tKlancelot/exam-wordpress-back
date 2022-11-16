@@ -59,7 +59,9 @@ class Mybooks{
                         <!-- je definis l'url de detail (par l'id) -->
                         <?php $id = 'https://fakerestapi.azurewebsites.net/api/v1/Books/'.$data['id']?>
                         <div class="book-card__footer">
-                            <?php echo '<a href='.$id.'>link</a>'?>                  
+                            <?php $myDate = strtotime($data['publishDate']);?>
+                            <?php echo '<a href='.$id.'>link</a>'?> 
+                            <?php echo '<span>'.date('m/d/Y H:i:s', $myDate).'</span>' ?> 
                         </div>
                     </div>
                     <?
