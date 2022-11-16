@@ -1,117 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
 /* variables */
 
-.plugin-container{
-    --plugin-primary-light:#fefefe;
-    --plugin-primary:#fbfbfb;
-    --plugin-dark:#1a1a1a;
-    --plugin-write:#484848;
-    --plugin-border:#e4e4e4;
+.plugin-container {
+    --plugin-primary-light: #fefefe;
+    --plugin-primary: #fcfcfc;
+    --plugin-dark: #1a1a1a;
+    --plugin-write: #484848;
+    --plugin-border: #efefef;
+    --plugin-secondary: #acff75;
+    --plugin-font-primary: 'Roboto', sans-serif;
 }
 
 /* global */
 
-.plugin-container *{
+.plugin-container * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.book-card *{
-    font-family:sans-serif;
-    color:var(--plugin-dark);
+.book-card * {
+    font-family: var(--plugin-font-primary);
+    color: var(--plugin-dark);
 }
+
+.book-card p,
+.book-card a,
+.book-card span {
+    font-size: 0.84vw;
+    color: var(--plugin-write);
+}
+
+@media screen and (max-width:1600px) {
+
+
+    .book-card p,
+    .book-card a,
+    .book-card span {
+        font-size: 0.92vw;
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .book-card p,
+    .book-card a,
+    .book-card span {
+        font-size: 3.2vw;
+    }
+}
+
 
 /***  components  ***/
 
 /* headings  */
 
-.book-card h1{
+.book-card h1 {
     font-size: 2.4vw;
 }
 
-/* links  */
+@media screen and (max-width:800px){
+    .book-card h1{
+        font-size: 6.4vw;
+    }
+}
 
-.book-card a,.book-card span{
+
+/* links, span, buttons  */
+
+.book-card a,
+.book-card span {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--plugin-border);
     border-radius: 24px;
     text-decoration: none;
-    padding:0.5vw;
+    padding:0.5rem;
     min-width: 4.8vw;
 }
 
-.book-card a:hover{
+.book-card a{
+    border: 1px solid var(--plugin-border);
+}
+
+.book-card a:hover {
     background-color: var(--plugin-dark);
     border-color: var(--plugin-dark);
-    color:var(--plugin-primary-light);
+    color: var(--plugin-primary-light);
 }
+
+.book-card span {
+    background-color: var(--plugin-secondary);
+}
+
+
+@media screen and (max-width:800px){
+
+.book-card a{
+    min-width: 16vw;
+}
+
+
+}
+
+
 
 /* paragraphs */
 
-.book-card p,.book-card a,.book-card span{
-    font-size: 0.88vw;
-    color:var(--plugin-write);
+.book-card p {
+    font-style: italic;
 }
 
 /* layout container */
 
-.plugin-container{
+.plugin-container {
     width: auto;
-    margin:auto 16%;
+    margin: auto 16%;
     padding: 2.4vw;
     background-color: var(--plugin-primary);
 }
 
-.plugin-container .grid{
+.plugin-container .grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
+
+@media screen and (max-width:1600px) {
+    .plugin-container {
+        margin: auto 10%;
+        padding: 2vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .plugin-container {
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .plugin-container .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
 
 /* layout card  */
 
-.book-card{
+.book-card {
     display: grid;
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat(3, auto);
     min-height: 24vw;
     grid-gap: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--plugin-primary-light);
-    border:1px solid var(--plugin-border);
-    border-radius: 2px;
+    border: 1px solid var(--plugin-border);
+    border-radius: 1px;
 }
 
-.book-card:hover{
-    box-shadow: 1px 1px var(--plugin-border),-1px -1px var(--plugin-border);
+.book-card:hover {
+    box-shadow:
+        1px 1px 1px var(--plugin-border), -1px -1px 1px var(--plugin-border),
+        0px -1px 1px var(--plugin-border), -1px 0px 1px var(--plugin-border);
 }
 
-.book-card__header{
+.book-card__header {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.book-card__body{
+.book-card__body {
     display: grid;
     grid-gap: 1rem;
 }
 
-.book-card__footer{
+.book-card__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.book-card__header img{
+.book-card__header img {
     width: 100%;
     height: -webkit-fill-available;
     object-fit: cover;
 }
-
-
-
-
-
-
